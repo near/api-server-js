@@ -1,12 +1,21 @@
 const nearAPI = require("near-api-js");
 const fs = require("fs");
 
-const config = {
+const mainnetConfig = {
   networkId: "mainnet",
   nodeUrl: "https://rpc.mainnet.internal.near.org",
   accountId: "social.near",
   blockHeight: 75942518,
 };
+
+const testnetConfig = {
+  networkId: "testnet",
+  nodeUrl: "https://rpc.testnet.internal.near.org",
+  accountId: "v1.social08.testnet",
+  blockHeight: 122978163,
+};
+
+const config = testnetConfig; // TODO env variable
 
 const SnapshotFilename = "res/snapshot.json";
 
