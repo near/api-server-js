@@ -12,7 +12,7 @@ const testnetConfig = {
   networkId: "testnet",
   nodeUrl: "https://rpc.testnet.internal.near.org",
   accountId: "v1.social08.testnet",
-  blockHeight: 122978163,
+  blockHeight: 123697718,
 };
 
 const config = testnetConfig; // TODO env variable
