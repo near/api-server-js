@@ -77,7 +77,10 @@ function saveJson(json, filename) {
     obj.b = node.block_height;
     const o = obj.o;
     node.children.forEach(([key, nodeValue]) => {
-      if ("Node" in nodeValue) {
+      if ("DeletedEntry" in nodeValue) {
+        // no nothing
+      }
+      else if ("Node" in nodeValue) {
         const link = { o: {}, b: 0 };
         const nodeId = nodeValue.Node;
         o[key] = [link];
