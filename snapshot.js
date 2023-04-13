@@ -78,7 +78,7 @@ function saveJson(json, filename) {
     const o = obj.o;
     node.children.forEach(([key, nodeValue]) => {
       if ("DeletedEntry" in nodeValue) {
-        // no nothing
+        // do nothing
       }
       else if ("Node" in nodeValue) {
         const link = { o: {}, b: 0 };
