@@ -12,7 +12,7 @@ const testnetConfig = {
   networkId: "testnet",
   nodeUrl: "https://rpc.testnet.internal.near.org",
   accountId: "v1.social08.testnet",
-  blockHeight: 122978163,
+  blockHeight: 123697718,
 };
 
 const config = testnetConfig; // TODO env variable
@@ -77,7 +77,10 @@ function saveJson(json, filename) {
     obj.b = node.block_height;
     const o = obj.o;
     node.children.forEach(([key, nodeValue]) => {
-      if ("Node" in nodeValue) {
+      if ("DeletedEntry" in nodeValue) {
+        // do nothing
+      }
+      else if ("Node" in nodeValue) {
         const link = { o: {}, b: 0 };
         const nodeId = nodeValue.Node;
         o[key] = [link];
