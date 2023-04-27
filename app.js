@@ -842,6 +842,10 @@ const buildIndex = (data, indexObj) => {
     }
   });
 
+  router.get("/health", (ctx) => {
+    ctx.body = "Healthy";
+  })
+
   // router.post("/subscribe", (ctx) => {
   //   ctx.type = "application/json; charset=utf-8";
   //   try {
