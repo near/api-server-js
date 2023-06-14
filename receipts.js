@@ -2,7 +2,7 @@ const { Client } = require("pg");
 
 require("dotenv").config();
 
-const SocialDbAccountId = "social.near";
+const SocialDbAccountId = "v1.social08.testnet"; //TODO include social.near if mainnet
 const MethodNameSet = "set";
 const MaxLimit = 10000;
 const StatusSuccess = "SUCCESS";
